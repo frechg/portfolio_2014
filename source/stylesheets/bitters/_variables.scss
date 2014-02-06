@@ -1,14 +1,14 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
-$sans-serif: $helvetica;
-$serif: $georgia;
+$sans-serif: 'Lato', $helvetica;
+$serif: 'Playfair Display SC', $georgia;
 
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
-$base-font-size: 1em;
+$base-font-size: 1.2em;
 $base-line-height: $base-font-size * 1.5;
 $base-border-radius: em(3);
 
@@ -27,8 +27,10 @@ $light-green: #E6EFC2;
 $base-body-color: white;
 
 //  Font Colors
-$base-font-color: $dark-gray;
+$base-font-color: rgb(40,40,40);
 $base-accent-color: $blue;
+$light-font-color: rgb(160,160,160);
+$medium-font-color: rgb(120,120,120);
 
 //  Text Link Colors
 $base-link-color: $base-accent-color;

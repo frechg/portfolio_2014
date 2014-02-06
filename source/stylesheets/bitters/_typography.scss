@@ -3,7 +3,7 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
-  line-height: $base-line-height;
+  line-height: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,7 +38,12 @@ h6 {
 }
 
 p {
-  margin: 0 0 ($base-line-height * .5);
+  line-height: 1.5em;
+  margin: 0;
+}
+
+p + p {
+  margin: 0 0 0.75em;
 }
 
 a {
@@ -61,7 +66,7 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-line-height 0;
+  margin: 1em 0;
 }
 
 img {
@@ -76,11 +81,6 @@ abbr, acronym {
 
 address {
   display: block;
-  margin: 0 0 ($base-line-height / 2);
-}
-
-hgroup {
-  margin-bottom: $base-line-height / 2;
 }
 
 del {
@@ -90,8 +90,8 @@ del {
 blockquote {
   border-left: 2px solid $base-border-color;
   color: lighten($base-font-color, 15);
-  margin: $base-line-height 0;
-  padding-left: $base-line-height / 2;
+  margin: 0.25em 0;
+  padding-left: 0.25em;
 }
 
 cite {

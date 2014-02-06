@@ -4,8 +4,9 @@ source 'http://rubygems.org'
 
 gem "bitters"
 gem "bourbon"
-gem "neat"
+gem "jquery-middleman"
 gem "middleman", "~>3.2.2"
+gem "neat"
 gem 'middleman-gh-pages'
 
 # Live-reloading plugin

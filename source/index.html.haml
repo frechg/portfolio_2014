@@ -1,4 +1,45 @@
 ---
 ---
 
-%h1 Galen Frechette
+%header
+  .avatar{style: "background-image: url('http://distilleryimage3.ak.instagram.com/2e1ad5fe75a611e3be431213a9d130e3_8.jpg')"}
+  %h1
+    Galen Frechette
+  %p
+    According to Dio Cassius 72.14.3–4, in about 189 AD,
+    under Commodus’ reign, a pestilence occurred, the largest of which he had
+    knowledge, in which 2,000 people died in Rome each day.
+
+  %nav
+    = link_to 'Portfolio', '#gallery'
+    = link_to 'Dribble', 'http://dribbble.com/GalenFrechette', target: '_blank'
+    = link_to 'Github', 'https://github.com/frechg', target: '_blank'
+    = mail_to 'galenfrechette@gmail.com', 'Contact'
+
+%section#gallery
+  %article.piece
+    %figure
+      = link_to '#project-title', class: 'show-more' do
+        .image-wrapper
+          = image_tag('http://distilleryimage3.ak.instagram.com/2e1ad5fe75a611e3be431213a9d130e3_8.jpg')
+
+    %figcaption
+      .title
+        %h2 Project title
+        %span January 2014 - 6 weeks
+      %p.description
+        The Cat's Eye Nebula or NGC 6543, is a planetary nebula in the
+        constellation of Draco. Structurally, it is one of the most complex
+        nebulae known, with high-resolution Hubble Space Telescope
+        observations revealing remarkable structures such as knots, jets,
+        bubbles and sinewy arc-like features. In the center of the Cat's Eye
+        there is a bright and hot star; around 1000 years ago this star lost
+        its outer envelope, producing the nebula.
+
+.modal#project-title
+  = link_to 'x', '#', class: 'close'
+  %ul.project-images
+    - 5.times do
+      %li.project-image
+        .image-wrapper
+          = image_tag('http://distilleryimage3.ak.instagram.com/2e1ad5fe75a611e3be431213a9d130e3_8.jpg')
