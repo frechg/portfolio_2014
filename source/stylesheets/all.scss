@@ -1,10 +1,12 @@
 @charset "utf-8";
 
+@import 'normalize';
 @import 'bourbon/bourbon';
-
+@import 'bitters/grid-settings';
+@import 'neat/neat';
+@import 'bitters/bitters';
 
 body {
-  @include pad();
   background: #d4d4d4 url("../images/background.png");
   text-align: center;
   font-family: sans-serif; }
