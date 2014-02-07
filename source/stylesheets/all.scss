@@ -41,11 +41,8 @@ html {
 }
 
 header {
-  @include shift(3);
-  @include span-columns(6 of 12);
-  float: none;
   height: 100vh;
-  padding-top: 10vh;
+  padding-top: 15vh;
   text-align: center;
 
   .avatar {
@@ -102,14 +99,16 @@ header {
 }
 
 #gallery {
+  @include clearfix;
   padding: 10% 0 0;
+
   article.piece {
-    @include clearfix;
-    margin-bottom: 20%;
+    @include span-columns(8 of 12);
+    @include shift(2);
+    margin-bottom: 15%;
   }
 
   figure {
-    @include span-columns(8 of 12);
     position: relative;
     text-align: center;
 
@@ -129,7 +128,7 @@ header {
       border: 1px solid lighten($base-border-color, 3%);
       box-shadow: 0 1px 10px 0 rgba(0,0,0,0.03);
       bottom: 5%;
-      // left: 5%;
+      left: 5%;
       width: 90%;
       z-index: 1;
     }
@@ -138,22 +137,22 @@ header {
       border: 1px solid lighten($base-border-color, 1.5%);
       box-shadow: 0 1px 10px 0 rgba(0,0,0,0.05);
       bottom: 2%;
-      // left: 2%;
+      left: 2%;
       width: 96%;
       z-index: 2;
     }
 
     &:hover {
       &:before {
-        @include transform(rotate(-1deg));
-        left: -18px;
+        // @include transform(rotate(-1deg));
+        // left: -18px;
         opacity: 1;
         top: -22px;
       }
 
       &:after {
-        @include transform(rotate(-0.5deg));
-        left: -10px;
+        // @include transform(rotate(-0.5deg));
+        // left: -10px;
         opacity: 1;
         top: -12px;
       }
@@ -161,19 +160,16 @@ header {
 
     a.show-more {
       background: #fff;
-      border: 1px solid $base-border-color;
       box-shadow: 0 1px 10px 0 rgba(0,0,0,0.1);
       display: block;
-      padding: 0.6em;
       position: relative;
       z-index: 3;
     }
   }
 
   figcaption {
-    @include span-columns(4 of 12);
-    @include omega();
-    padding-top: 10%;
+    margin-bottom: 3em;
+    text-align: center;
 
     .title {
       margin-bottom: 1.6em;
@@ -190,15 +186,17 @@ header {
     h2 {
       color: $medium-font-color;
       letter-spacing: 1px;
-      font-family: $serif;
-      font-size: 2.1em;
+      font-family: $sans-serif;
+      font-size: 2em;
       font-weight: 300;
+      text-transform: uppercase;
     }
 
     p {
       color: $light-font-color;
-      font-size: 1em;
+      font-size: 0.9em;
       font-family: 'Gentium Book';
+      font-family: $sans-serif;
     }
   }
 }

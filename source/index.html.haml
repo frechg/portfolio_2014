@@ -11,35 +11,111 @@
     knowledge, in which 2,000 people died in Rome each day.
 
   %nav
-    = link_to 'Portfolio', '#gallery'
-    = link_to 'Dribble', 'http://dribbble.com/GalenFrechette', target: '_blank'
+    = link_to 'Dribble', 'http://dribbble.com/GalenFrechette/projects', target: '_blank'
+    = link_to 'Writing', 'http://robots.thoughtbot.com/the-product-design-sprint', target: '_blank'
     = link_to 'Github', 'https://github.com/frechg', target: '_blank'
     = mail_to 'galenfrechette@gmail.com', 'Contact'
 
 %section#gallery
   %article.piece
-    %figure
-      = link_to '#project-title', class: 'show-more' do
-        .image-wrapper
-          = image_tag('http://distilleryimage3.ak.instagram.com/2e1ad5fe75a611e3be431213a9d130e3_8.jpg')
-
     %figcaption
       .title
-        %h2 Project title
-        %span January 2014 - 6 weeks
-      %p.description
-        The Cat's Eye Nebula or NGC 6543, is a planetary nebula in the
-        constellation of Draco. Structurally, it is one of the most complex
-        nebulae known, with high-resolution Hubble Space Telescope
-        observations revealing remarkable structures such as knots, jets,
-        bubbles and sinewy arc-like features. In the center of the Cat's Eye
-        there is a bright and hot star; around 1000 years ago this star lost
-        its outer envelope, producing the nebula.
+        %h2 Tenant.io
+        %span 4th Place, 2013 Rails Rumble - 48 hrs
+    %figure
+      = link_to '#tenant', class: 'show-more' do
+        .image-wrapper
+          = image_tag('tenant/tenant_home.jpg')
 
-.modal#project-title
+  %article.piece
+    %figcaption
+      .title
+        %h2 Great Engagements
+        %span Validation Prototype - 10hrs
+    %figure
+      = link_to '#tenant', class: 'show-more' do
+        .image-wrapper
+          = image_tag('great_engagements/great_engagements.jpg')
+
+  %article.piece
+    %figcaption
+      .title
+        %h2 Blue Sky
+        %span Febuary 2013 - Client Project
+    %figure
+      = link_to '#blue-sky', class: 'show-more' do
+        .image-wrapper
+          = image_tag('blue_sky/assessment_finish_1.png')
+
+  %article.piece
+    %figcaption
+      .title
+        %h2 Gift of Knowledge
+        %span January 2013 - Client Project
+    %figure
+      = link_to '#gift-of-knowledge', class: 'show-more' do
+        .image-wrapper
+          = image_tag('gift_of_knowledge/giftofknowledge_school_donate.jpg')
+
+  %article.piece
+    %figcaption
+      .title
+        %h2 Tddium
+        %span September 2012 - Client Project
+    %figure
+      = link_to '#tddium', class: 'show-more' do
+        .image-wrapper
+          = image_tag('tddium/tddium_dashboard.jpg')
+
+  %article.piece
+    %figcaption
+      .title
+        %h2 edX
+        %span May 2012 - Client Project
+    %figure
+      = link_to '#edx', class: 'show-more' do
+        .image-wrapper
+          = image_tag('edx/edx-home.jpg')
+
+  %article.piece
+    %figcaption
+      .title
+        %h2 Lights Up
+        %span March 2012 - Client Project
+    %figure
+      = link_to '#lights-up', class: 'show-more' do
+        .image-wrapper
+          = image_tag('lights_up/lightsup-login.jpg')
+
+  %article.piece
+    %figcaption
+      .title
+        %h2 Awesome Foundation
+        %span February 2012 - Client Project
+    %figure
+      = link_to '#awesome-foundation', class: 'show-more' do
+        .image-wrapper
+          = image_tag('awesome_foundation/af-home.jpg')
+
+  %article.piece
+    %figcaption
+      .title
+        %h2 Design with Boston
+        %span November 2011 - thoughbot Event
+    %figure
+      = link_to '#design-boston', class: 'show-more' do
+        .image-wrapper
+          = image_tag('design_boston/design-with-boston.jpg')
+
+.modal#tenant
   = link_to 'x', '#', class: 'close'
   %ul.project-images
-    - 5.times do
-      %li.project-image
-        .image-wrapper
-          = image_tag('http://distilleryimage3.ak.instagram.com/2e1ad5fe75a611e3be431213a9d130e3_8.jpg')
+    %li.project-image
+      .image-wrapper
+        = image_tag('tenant/tenant_home.jpg')
+    %li.project-image
+      .image-wrapper
+        = image_tag('tenant/tenant_signin.jpg')
+    %li.project-image
+      .image-wrapper
+        = image_tag('tenant/tenant_dashboard.jpg')
