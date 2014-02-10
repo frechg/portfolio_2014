@@ -2,7 +2,7 @@
 ---
 
 %header
-  .avatar{style: "background-image: url('http://distilleryimage3.ak.instagram.com/2e1ad5fe75a611e3be431213a9d130e3_8.jpg')"}
+  .avatar{style: "background-image: url(#{image_path('avatar.jpg')})"}
   %h1
     Galen Frechette
   %p
@@ -16,6 +16,10 @@
     = link_to 'Github', 'https://github.com/frechg', target: '_blank'
     = mail_to 'galenfrechette@gmail.com', 'Contact'
 
+%aside
+  %div
+    %span Selected Works
+
 %section#gallery
   %article.piece
     %figcaption
@@ -27,15 +31,18 @@
         .image-wrapper
           = image_tag('tenant/tenant_home.jpg')
 
-  %article.piece
-    %figcaption
-      .title
-        %h2 Great Engagements
-        %span Validation Prototype - 10hrs
-    %figure
-      = link_to '#tenant', class: 'show-more' do
-        .image-wrapper
-          = image_tag('great_engagements/great_engagements.jpg')
+    .modal#tenant
+      = link_to 'x', '#', class: 'close'
+      %ul.project-images
+        %li.project-image
+          .image-wrapper
+            = image_tag('tenant/tenant_home.jpg')
+        %li.project-image
+          .image-wrapper
+            = image_tag('tenant/tenant_signin.jpg')
+        %li.project-image
+          .image-wrapper
+            = image_tag('tenant/tenant_dashboard.jpg')
 
   %article.piece
     %figcaption
@@ -47,6 +54,13 @@
         .image-wrapper
           = image_tag('blue_sky/assessment_finish_1.png')
 
+    .modal#blue-sky
+      = link_to 'x', '#', class: 'close'
+      %ul.project-images
+        %li.project-image
+          .image-wrapper
+            = image_tag('blue_sky/assessment_finish_1.png')
+
   %article.piece
     %figcaption
       .title
@@ -56,6 +70,20 @@
       = link_to '#gift-of-knowledge', class: 'show-more' do
         .image-wrapper
           = image_tag('gift_of_knowledge/giftofknowledge_school_donate.jpg')
+
+  .modal#gift-of-knowledge
+    = link_to 'x', '#', class: 'close'
+    %ul.project-images
+      %li.project-image
+        .image-wrapper= image_tag('gift_of_knowledge/giftofknowledge_school_landing.jpg')
+      %li.project-image
+        .image-wrapper= image_tag('gift_of_knowledge/giftofknowledge_school_donate.jpg')
+      %li.project-image
+        .image-wrapper= image_tag('gift_of_knowledge/giftofknowledge_thankyou.jpg')
+      %li.project-image
+        .image-wrapper= image_tag('gift_of_knowledge/giftofknowledge_create_account.jpg')
+      %li.project-image
+        .image-wrapper= image_tag('gift_of_knowledge/giftofknowledge_faq.jpg')
 
   %article.piece
     %figcaption
@@ -67,6 +95,20 @@
         .image-wrapper
           = image_tag('tddium/tddium_dashboard.jpg')
 
+    .modal#tddium
+      = link_to 'x', '#', class: 'close'
+      %ul.project-images
+        %li.project-image
+          .image-wrapper= image_tag('tddium/tddium_dashboard.jpg')
+        %li.project-image
+          .image-wrapper= image_tag('tddium/tddium_dashboard_feedback.jpg')
+        %li.project-image
+          .image-wrapper= image_tag('tddium/tddium_creat_new_account.jpg')
+        %li.project-image
+          .image-wrapper= image_tag('tddium/tddium_collaborators.png')
+        %li.project-image
+          .image-wrapper= image_tag('tddium/tddium_profile_settings.png')
+
   %article.piece
     %figcaption
       .title
@@ -76,6 +118,18 @@
       = link_to '#edx', class: 'show-more' do
         .image-wrapper
           = image_tag('edx/edx-home.jpg')
+
+    .modal#edx
+      = link_to 'x', '#', class: 'close'
+      %ul.project-images
+        %li.project-image
+          .image-wrapper= image_tag('edx/edx-home.jpg')
+        %li.project-image
+          .image-wrapper= image_tag('edx/edx-login.jpg')
+        %li.project-image
+          .image-wrapper= image_tag('edx/edx-courses.jpg')
+        %li.project-image
+          .image-wrapper= image_tag('edx/edx-course.jpg')
 
   %article.piece
     %figcaption
@@ -87,6 +141,16 @@
         .image-wrapper
           = image_tag('lights_up/lightsup-login.jpg')
 
+    .modal#lights-up
+      = link_to 'x', '#', class: 'close'
+      %ul.project-images
+        %li.project-image
+          .image-wrapper= image_tag('lights_up/lightsup-login.jpg')
+        %li.project-image
+          .image-wrapper= image_tag('lights_up/lightsup-playlist.jpg')
+        %li.project-image
+          .image-wrapper= image_tag('lights_up/lightsup-sequence-1.jpg')
+
   %article.piece
     %figcaption
       .title
@@ -96,6 +160,13 @@
       = link_to '#awesome-foundation', class: 'show-more' do
         .image-wrapper
           = image_tag('awesome_foundation/af-home.jpg')
+
+    .modal#awesome-foundation
+      = link_to 'x', '#', class: 'close'
+      %ul.project-images
+        %li.project-image
+          .image-wrapper
+            = image_tag('awesome_foundation/af-home.jpg')
 
   %article.piece
     %figcaption
@@ -107,15 +178,13 @@
         .image-wrapper
           = image_tag('design_boston/design-with-boston.jpg')
 
-.modal#tenant
-  = link_to 'x', '#', class: 'close'
-  %ul.project-images
-    %li.project-image
-      .image-wrapper
-        = image_tag('tenant/tenant_home.jpg')
-    %li.project-image
-      .image-wrapper
-        = image_tag('tenant/tenant_signin.jpg')
-    %li.project-image
-      .image-wrapper
-        = image_tag('tenant/tenant_dashboard.jpg')
+    .modal#design-boston
+      = link_to 'x', '#', class: 'close'
+      %ul.project-images
+        %li.project-image
+          .image-wrapper
+            = image_tag('design_boston/design-with-boston.jpg')
+        %li.project-image
+          .image-wrapper
+            %video{ loop: 'true', controls: 'true' }
+              %source{src: 'images/design_boston/dwb.m4v', type: 'video/mp4'}

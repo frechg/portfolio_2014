@@ -34,7 +34,7 @@ html {
     top: 0;
   }
 
-  img {
+  img, video {
     display: block;
     width: 100%;
   }
@@ -98,9 +98,42 @@ header {
   }
 }
 
+aside {
+  text-align: center;
+
+  div {
+    display: inline-block;
+    position: relative;
+    padding: 0 10%;
+
+    &:before {
+      border-bottom: 1px solid $base-border-color;
+      content: "";
+      position: absolute;
+      top: 0.7em;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  span {
+    // border-bottom: 1px solid $base-border-color;
+    // border-top: 1px solid $base-border-color;
+    background: #fff;
+    color: $light-font-color;
+    display: inline-block;
+    font-family: $serif;
+    letter-spacing: 3px;
+    padding: 0 1.2em;
+    position: relative;
+    z-index: 2;
+  }
+}
+
 #gallery {
   @include clearfix;
-  padding: 10% 0 0;
+  padding: 25% 0 0;
 
   article.piece {
     @include span-columns(8 of 12);
