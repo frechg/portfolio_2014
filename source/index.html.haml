@@ -11,7 +11,7 @@
     knowledge, in which 2,000 people died in Rome each day.
 
   %nav
-    = link_to 'Dribble', 'http://dribbble.com/GalenFrechette/projects', target: '_blank'
+    = link_to 'Dribble', 'http://dribbble.com/GalenFrechette', target: '_blank'
     = link_to 'Writing', 'http://robots.thoughtbot.com/the-product-design-sprint', target: '_blank'
     = link_to 'Github', 'https://github.com/frechg', target: '_blank'
     = mail_to 'galenfrechette@gmail.com', 'Contact'
@@ -24,25 +24,55 @@
   %article.piece
     %figcaption
       .title
+        %h2 Cardless
+        %span Personal Project - In Progress
+    %figure
+      = link_to '#cardless', class: 'show-more' do
+        .image-wrapper= image_tag('tenant/tenant_home.jpg')
+
+    .modal#cardless
+      = link_to 'x', '#', class: 'close'
+      %ul.project-images
+        %li.project-image
+          .image-wrapper= image_tag('tenant/tenant_home.jpg')
+
+  %article.piece
+    %figcaption
+      .title
+        %h2 Hover
+        %span Personal Project - In Progress
+    %figure
+      = link_to '#hover', class: 'show-more' do
+        .image-wrapper= image_tag('hover/edit_gif.jpg')
+
+    .modal#hover
+      = link_to 'x', '#', class: 'close'
+      %ul.project-images
+        %li.project-image
+          .image-wrapper= image_tag('hover/set_capture_2.jpg')
+        %li.project-image
+          .image-wrapper= image_tag('hover/set_capture_1.jpg')
+        %li.project-image
+          .image-wrapper= image_tag('hover/edit_gif.jpg')
+
+  %article.piece
+    %figcaption
+      .title
         %h2 Tenant.io
         %span 4th Place, 2013 Rails Rumble - 48 hrs
     %figure
       = link_to '#tenant', class: 'show-more' do
-        .image-wrapper
-          = image_tag('tenant/tenant_home.jpg')
+        .image-wrapper= image_tag('tenant/tenant_home.jpg')
 
     .modal#tenant
       = link_to 'x', '#', class: 'close'
       %ul.project-images
         %li.project-image
-          .image-wrapper
-            = image_tag('tenant/tenant_home.jpg')
+          .image-wrapper= image_tag('tenant/tenant_home.jpg')
         %li.project-image
-          .image-wrapper
-            = image_tag('tenant/tenant_signin.jpg')
+          .image-wrapper= image_tag('tenant/tenant_signin.jpg')
         %li.project-image
-          .image-wrapper
-            = image_tag('tenant/tenant_dashboard.jpg')
+          .image-wrapper= image_tag('tenant/tenant_dashboard.jpg')
 
   %article.piece
     %figcaption
@@ -51,15 +81,16 @@
         %span Febuary 2013 - Client Project
     %figure
       = link_to '#blue-sky', class: 'show-more' do
-        .image-wrapper
-          = image_tag('blue_sky/assessment_finish_1.png')
+        .image-wrapper= image_tag('blue_sky/assessment_finish_1.png')
 
     .modal#blue-sky
       = link_to 'x', '#', class: 'close'
       %ul.project-images
         %li.project-image
-          .image-wrapper
-            = image_tag('blue_sky/assessment_finish_1.png')
+          .image-wrapper= image_tag('blue_sky/assessment_finish_1.png')
+
+      = link_to 'View more on Dribble', 'http://dribbble.com/GalenFrechette/projects/186446-Blue-Sky',
+        class: 'view-more-work', target: '_blank'
 
   %article.piece
     %figcaption
@@ -68,8 +99,7 @@
         %span January 2013 - Client Project
     %figure
       = link_to '#gift-of-knowledge', class: 'show-more' do
-        .image-wrapper
-          = image_tag('gift_of_knowledge/giftofknowledge_school_donate.jpg')
+        .image-wrapper= image_tag('gift_of_knowledge/giftofknowledge_school_donate.jpg')
 
   .modal#gift-of-knowledge
     = link_to 'x', '#', class: 'close'
@@ -84,30 +114,6 @@
         .image-wrapper= image_tag('gift_of_knowledge/giftofknowledge_create_account.jpg')
       %li.project-image
         .image-wrapper= image_tag('gift_of_knowledge/giftofknowledge_faq.jpg')
-
-  %article.piece
-    %figcaption
-      .title
-        %h2 Tddium
-        %span September 2012 - Client Project
-    %figure
-      = link_to '#tddium', class: 'show-more' do
-        .image-wrapper
-          = image_tag('tddium/tddium_dashboard.jpg')
-
-    .modal#tddium
-      = link_to 'x', '#', class: 'close'
-      %ul.project-images
-        %li.project-image
-          .image-wrapper= image_tag('tddium/tddium_dashboard.jpg')
-        %li.project-image
-          .image-wrapper= image_tag('tddium/tddium_dashboard_feedback.jpg')
-        %li.project-image
-          .image-wrapper= image_tag('tddium/tddium_creat_new_account.jpg')
-        %li.project-image
-          .image-wrapper= image_tag('tddium/tddium_collaborators.png')
-        %li.project-image
-          .image-wrapper= image_tag('tddium/tddium_profile_settings.png')
 
   %article.piece
     %figcaption
@@ -134,43 +140,6 @@
   %article.piece
     %figcaption
       .title
-        %h2 Lights Up
-        %span March 2012 - Client Project
-    %figure
-      = link_to '#lights-up', class: 'show-more' do
-        .image-wrapper
-          = image_tag('lights_up/lightsup-login.jpg')
-
-    .modal#lights-up
-      = link_to 'x', '#', class: 'close'
-      %ul.project-images
-        %li.project-image
-          .image-wrapper= image_tag('lights_up/lightsup-login.jpg')
-        %li.project-image
-          .image-wrapper= image_tag('lights_up/lightsup-playlist.jpg')
-        %li.project-image
-          .image-wrapper= image_tag('lights_up/lightsup-sequence-1.jpg')
-
-  %article.piece
-    %figcaption
-      .title
-        %h2 Awesome Foundation
-        %span February 2012 - Client Project
-    %figure
-      = link_to '#awesome-foundation', class: 'show-more' do
-        .image-wrapper
-          = image_tag('awesome_foundation/af-home.jpg')
-
-    .modal#awesome-foundation
-      = link_to 'x', '#', class: 'close'
-      %ul.project-images
-        %li.project-image
-          .image-wrapper
-            = image_tag('awesome_foundation/af-home.jpg')
-
-  %article.piece
-    %figcaption
-      .title
         %h2 Design with Boston
         %span November 2011 - thoughbot Event
     %figure
@@ -188,3 +157,6 @@
           .image-wrapper
             %video{ loop: 'true', controls: 'true' }
               %source{src: 'images/design_boston/dwb.m4v', type: 'video/mp4'}
+
+= link_to 'View more projects on Dribble', 'http://dribbble.com/GalenFrechette/projects',
+  class: 'view-more-work', target: '_blank'
