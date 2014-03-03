@@ -1,0 +1,54 @@
+@include keyframes(piece) {
+  0% {
+    opacity: 0;
+    @include transform(scale(1.02));
+    top: 1em;
+  }
+  90% {
+    @include transform(scale(1));
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////
+
+@include keyframes(home) {
+  0% {
+    opacity: 0;
+    @include transform(scale(0.99));
+  }
+  90% {
+    @include transform(scale(1));
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////
+
+@include keyframes(bounce) {
+  0% {
+    top: 0;
+  }
+  50% {
+    @include transform(scale(1.02));
+    top: -0.4em;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////
+
+@include keyframes(loading) {
+  35% {
+    // border-color: rgb(210, 0, 255);
+    border-color: rgb(205, 205, 205);
+    @include transform(scale(1.06));
+  }
+}
