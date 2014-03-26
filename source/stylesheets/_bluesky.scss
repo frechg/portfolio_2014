@@ -34,6 +34,10 @@ section.project-overview {
     margin-bottom: 4em;
     text-align: left;
 
+    .image-wrapper {
+      margin-bottom: 4em;
+    }
+
     .narative {
       margin: 0 2em;
     }
@@ -92,6 +96,10 @@ section.project-overview {
 
       & + h3 {
         margin-top: 3em;
+      }
+
+      & + .image-wrapper {
+        margin-top: 2em;
       }
     }
 
