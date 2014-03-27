@@ -1,8 +1,9 @@
 section.project-overview {
   margin: 3em 0;
+  text-align: left;
 
   .title {
-    margin-bottom: 4em;
+    margin: 0 2em 3em;
 
     h1 {
       color: $medium-font-color;
@@ -32,7 +33,6 @@ section.project-overview {
   article {
     color: $base-font-color;
     margin-bottom: 4em;
-    text-align: left;
 
     .image-wrapper {
       margin-bottom: 4em;
@@ -74,8 +74,8 @@ section.project-overview {
       margin: 0 0 1em;
 
       &.pull {
-        margin: 2em 1em;
-        text-align: center;
+        // margin: 2em 1em;
+        // text-align: center;
       }
     }
 
