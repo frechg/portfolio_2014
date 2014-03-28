@@ -9,6 +9,9 @@
 @import 'animations';
 @import '_bluesky';
 
+$red: rgb(245, 95, 95);
+$green: rgb(123, 243, 137);
+
 html {
   height: 100%;
 
@@ -58,6 +61,38 @@ header {
   height: 100%;
   text-align: center;
   width: 100%;
+  position: relative;
+
+  a.view-gallery {
+    @include transition(all 0.15s linear);
+    @include position(absolute, 0 0 2em 50%);
+    @include size(60px);
+    border: 1px solid rgb(200,200,200);
+    border-radius: 50%;
+    display: block;
+    margin-left: -30px;
+
+    &:before {
+      @include transition(all 0.15s linear);
+      @include position(absolute, 14px 0 0 50%);
+      @include size(20px);
+      @include transform(rotate(45deg));
+      border-bottom: 1px solid rgb(200,200,200);
+      border-right: 1px solid rgb(200,200,200);
+      content: "";
+      display: block;
+      margin-left: -10px;
+    }
+
+    &:hover {
+      border-color: $green;
+      background-color: $green;
+
+      &:before {
+        border-color: #fff;
+      }
+    }
+  }
 
   &.show {
     .inner-wrapper {
@@ -114,14 +149,13 @@ header {
   }
 
   .avatar {
+    @include size(120px);
     background-color: rgb(240,240,240);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     border-radius: 100%;
     display: inline-block;
-    height: 180px;
-    width: 180px;
     margin-bottom: 1.4em;
     position: relative;
     vertical-align: middle;
@@ -129,10 +163,10 @@ header {
 
   h1 {
     color: $medium-font-color;
-    letter-spacing: 3px;
-    font-size: 3em;
+    letter-spacing: 7px;
+    font-size: 2.2em;
     font-weight: 300;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.6em;
     text-transform: uppercase;
     vertical-align: middle;
   }
@@ -144,9 +178,18 @@ header {
   }
 
   nav {
-    border-top: 1px solid $base-border-color;
     display: inline-block;
-    padding: 1.6em 2em 0;
+    padding: 1.6em 3em 0;
+    position: relative;
+
+    &:before {
+      @include background-image(linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0)));
+      @include position(absolute, 0px 0 0 0px);
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+    }
 
     a {
       @include transition(all 0.15s linear);
@@ -307,21 +350,26 @@ a.view-more-work {
   z-index: 100;
 
   a.close {
-    @include size(34px);
+    @include size(50px);
     @include transform(rotate(45deg));
+    border: 1px solid darken($base-border-color, 10%);
+    border-radius: 50%;
     position: fixed;
     right: 1em;
     top: 1em;
 
     &:hover {
+      border-color: $red;
+      background-color: $red;
+
       &:before, &:after {
-        background-color: $base-font-color;
+        background-color: #fff;
       }
     }
 
     &:before, &:after {
       @include transition(all 0.15s linear);
-      background-color: $light-font-color;
+      background-color: darken($base-border-color, 12%);
       content: "";
       display: block;
       position: absolute;
@@ -331,15 +379,15 @@ a.view-more-work {
 
     &:before {
       height: 1px;
-      margin-left: -17px;
+      margin-left: -13px;
       margin-top: -1px;
-      width: 34px;
+      width: 26px;
     }
 
     &:after {
-      height: 34px;
+      height: 26px;
       margin-left: -1px;
-      margin-top: -17px;
+      margin-top: -13px;
       width: 1px;
     }
   }

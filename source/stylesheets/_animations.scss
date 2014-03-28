@@ -30,16 +30,15 @@
 
 /////////////////////////////////////////////////////////////////////
 
-@include keyframes(bounce) {
+@include keyframes(bounce-z) {
   0% {
-    top: 0;
+    @include transform(scale(0.96));
   }
-  50% {
+  70% {
     @include transform(scale(1.02));
-    top: -0.4em;
   }
   100% {
-    top: 0;
+    @include transform(scale(1));
   }
 }
 
