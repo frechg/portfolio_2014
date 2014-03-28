@@ -143,6 +143,7 @@ header {
     .inner-wrapper {
       @include transition(opacity 1s linear);
       opacity: 0;
+      padding-bottom: 2em;
       position: relative;
       visibility: hidden;
     }
