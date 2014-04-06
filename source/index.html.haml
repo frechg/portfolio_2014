@@ -10,18 +10,14 @@
       .avatar{style: "background-image: url(#{image_path('avatar.jpg')})"}
       %h1
         Galen Frechette
-      %p
-        According to Dio Cassius 72.14.3–4, in about 189 AD,
-        under Commodus’ reign, a pestilence occurred, the largest of which he had
-        knowledge, in which 2,000 people died in Rome each day.
-
       %nav
         = link_to 'Dribble', 'http://dribbble.com/GalenFrechette', target: '_blank'
         = link_to 'Writing', 'http://robots.thoughtbot.com/the-product-design-sprint', target: '_blank'
         = link_to 'Github', 'https://github.com/frechg', target: '_blank'
         = mail_to 'galenfrechette@gmail.com', 'Contact'
 
-  = link_to '', '#gallery', class: 'view-gallery'
+  = link_to '#gallery', class: 'view-gallery' do
+    %i.fa.fa-arrow-down
 
 .container
   %section#gallery
