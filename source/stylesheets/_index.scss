@@ -27,20 +27,6 @@ header.portfolio {
     }
   }
 
-  .avatar {
-    @include size(120px);
-    background-color: rgb(240,240,240);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    border-radius: 100%;
-    display: inline-block;
-    display: none;
-    margin-bottom: 1.4em;
-    position: relative;
-    vertical-align: middle;
-  }
-
   h1 {
     color: #fff;
     letter-spacing: 7px;
